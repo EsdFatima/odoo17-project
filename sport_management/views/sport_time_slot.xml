@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_sport_time_slot_form" model="ir.ui.view">
+            <field name="name">sport.time.slot.form</field>
+            <field name="model">sport.time.slot</field>
+            <field name="arch" type="xml">
+                <form string="Sport Time Slot">
+                    <sheet>
+                        <group>
+
+                            <field name="start_time"/>
+                            <field name="end_time"/>
+                            <field name="participant_id"/>
+                            <field name="activity_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_session_calendar" model="ir.ui.view">
+            <field name="name">sport.time.slot.calendar</field>
+            <field name="model">sport.time.slot</field>
+            <field name="arch" type="xml">
+                <calendar
+                          string="Sport Time SLot"
+                          form_view_id="%sport_management.view_sport_time_slot_form)d"
+                          event_open_popup="true"
+                          date_start="start_time"
+                          date_stop="end_time"
+                          quick_create="0"
+                          hide_time="True"
+                          mode="month"
+                         >
+                    <field name="activity_id"/>
+                    <field name="start_time"/>
+                    <field name="end_time"/>
+                </calendar>
+            </field>
+        </record>
+
+        <record id="action_sport_time_slot" model="ir.actions.act_window">
+            <field name="name">Sport Time Slot</field>
+            <field name="res_model">sport.time.slot</field>
+            <field name="view_mode">calendar,tree,form,activity</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create a new time slot</p>
+            </field>
+        </record>
+    </data>
+    <menuitem id="menu_sport_time_slot" name="Sport Time Slot" parent="menu_sport_management"
+              action="action_sport_time_slot"/>
+</odoo>
+
+
