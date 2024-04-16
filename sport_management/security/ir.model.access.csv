@@ -1,4 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-sport_management.access_sport_activity,access_sport_activity,sport_management.model_sport_activity,base.group_user,1,1,1,1
-sport_management.access_sport_session,access_sport_session,sport_management.model_sport_session,base.group_user,1,1,1,1
-sport_management.access_sport_time_slot,access_sport_time_slot,sport_management.model_sport_time_slot,base.group_user,1,1,1,1
+sport_management.access_sport_activity,access_sport_activity,sport_management.model_sport_activity,sport_management.group_sport_admin,1,1,1,1
+sport_management.access_sport_session,access_sport_session,sport_management.model_sport_session,sport_management.group_sport_admin,1,1,1,1
+sport_management.access_sport_time_slot,access_sport_time_slot,sport_management.model_sport_time_slot,sport_management.group_sport_admin,1,1,1,1
+sport_management.access_sport_session,access_sport_session,sport_management.model_sport_session,,1,1,1,1
+sport_management.access_sport_time_slot,access_sport_time_slot,sport_management.model_sport_time_slot,,1,1,1,1
+sport_management.access_sport_activity_read,access_sport_activity_read,sport_management.model_sport_activity,,1,0,0,0
