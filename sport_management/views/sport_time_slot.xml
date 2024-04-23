@@ -6,16 +6,39 @@
             <field name="model">sport.time.slot</field>
             <field name="arch" type="xml">
                 <form string="Sport Time Slot">
+                    <header>
+                        <button name="action_confirm" string="Confirm" type="object" class="oe_highlight"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
                     <sheet>
+                        <div name="button_box" position="inside">
+                            <button class="oe_stat_button" type="object"
+                                    name="open_sale_order"
+                                    icon="fa-pencil-square-o">
+                                <field string="Sale Orders" name="sale_order_ids" widget="statinfo"/>
+                            </button>
+                        </div>
                         <group>
-
+                            <field name="name"/>
                             <field name="start_time"/>
                             <field name="end_time"/>
                             <field name="participant_id"/>
-                            <field name="activity_id"/>
+                            <field name="product_id"/>
                         </group>
                     </sheet>
                 </form>
+            </field>
+        </record>
+        <record id="view_sport_time_slot_tree" model="ir.ui.view">
+            <field name="name">sport.time.slot.tree</field>
+            <field name="model">sport.time.slot</field>
+            <field name="arch" type="xml">
+                <tree string="Sport Time Slot">
+                    <field name="participant_id"/>
+                    <field name="product_id"/>
+                    <field name="start_time"/>
+                    <field name="end_time"/>
+                </tree>
             </field>
         </record>
         <record id="view_time_slot_calendar" model="ir.ui.view">
@@ -23,15 +46,15 @@
             <field name="model">sport.time.slot</field>
             <field name="arch" type="xml">
                 <calendar
-                          string="Sport Time SLot"
-                          form_view_id="%sport_management.view_sport_time_slot_form)d"
-                          event_open_popup="true"
-                          date_start="start_time"
-                          date_stop="end_time"
-                          quick_create="0"
-                          hide_time="True"
-                          mode="month"
-                         >
+                        string="Sport Time SLot"
+                        form_view_id="%(sport_management.view_sport_time_slot_form)d"
+                        event_open_popup="true"
+                        date_start="start_time"
+                        date_stop="end_time"
+                        quick_create="0"
+                        hide_time="True"
+                        mode="month"
+                >
                 </calendar>
             </field>
         </record>
@@ -39,7 +62,7 @@
         <record id="action_sport_time_slot" model="ir.actions.act_window">
             <field name="name">Sport Time Slot</field>
             <field name="res_model">sport.time.slot</field>
-            <field name="view_mode">calendar,tree,form,activity</field>
+            <field name="view_mode">calendar,tree,form</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">Create a new time slot</p>
             </field>

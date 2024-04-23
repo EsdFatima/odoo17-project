@@ -4,15 +4,16 @@
     'author': 'ESSID Fatima Zahraa',
     'category': 'Custom Modules',
     'license': 'LGPL-3',
-    'summary': 'Management of sports',
+    'summary': 'Sports Management',
     'description': """
-    The Sport Management module in Odoo provides a comprehensive solution for schools to efficiently oversee sports activities for
-     students and athletes. It consists of three core components: activities, sessions, and time slots.
+    The Sport Management module in Odoo provides a comprehensive solution for schools to efficiently oversee sports activities for students and athletes. 
+    It consists of three core components: activities, sessions, and time slots.
     """,
-    'depends': ['base'],
+    'depends': ['base','sale_management'],
     'data': [
         'security/security.xml',
         'security/ir.model.access.csv',
+        'views/res_partner.xml',
         'views/sport_activity.xml',
         'views/sport_session.xml',
         'views/sport_time_slot.xml',
