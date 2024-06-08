@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Form View -->
+    <record id="view_school_year_form" model="ir.ui.view">
+        <field name="name">school.year.form</field>
+        <field name="model">school.year</field>
+        <field name="arch" type="xml">
+            <form string="School Year">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="start_date"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree View -->
+    <record id="view_school_year_tree" model="ir.ui.view">
+        <field name="name">school.year.tree</field>
+        <field name="model">school.year</field>
+        <field name="arch" type="xml">
+            <tree string="School Years">
+                <field name="name" readonly="1"/>
+                <field name="start_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="school_year_action" model="ir.actions.act_window">
+        <field name="name">School Years</field>
+        <field name="res_model">school.year</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create a new school year</p>
+        </field>
+    </record>
+
+    <!-- Menu Item -->
+    <menuitem id="menu_school_configuration" name="Configuration" parent="school_management.menu_school_management" sequence="10"/>
+    <menuitem id="menu_school_year" name="Années Scolaires" parent="menu_school_configuration" action="school_year_action"/>
+</odoo>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Form View -->
+    <record id="view_school_classes_form" model="ir.ui.view">
+        <field name="name">school.classe.form</field>
+        <field name="model">school.classes</field>
+        <field name="arch" type="xml">
+            <form string="School Year">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="sub_level_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree View -->
+    <record id="view_school_classes_tree" model="ir.ui.view">
+        <field name="name">school.classes.tree</field>
+        <field name="model">school.classes</field>
+        <field name="arch" type="xml">
+            <tree string="School Classes">
+                <field name="name"/>
+                <field name="sub_level_id" options="{'no_create': True}"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="school_classes_action" model="ir.actions.act_window">
+        <field name="name">School Classes</field>
+        <field name="res_model">school.classes</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create a new school class</p>
+        </field>
+    </record>
+
+    <!-- Menu Item -->
+    <menuitem id="menu_school_classes" name="Les Classes" parent="menu_school_configuration" action="school_classes_action"/>
+</odoo>

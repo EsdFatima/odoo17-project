@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Form View -->
+    <record id="view_school_sub_level_form" model="ir.ui.view">
+        <field name="name">school.sub.level.form</field>
+        <field name="model">school.sub.level</field>
+        <field name="arch" type="xml">
+            <form string="School Sub Level">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="level_id" widget="many2many_tags" options="{'no_create': True}"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree View -->
+    <record id="view_school_sub_level_tree" model="ir.ui.view">
+        <field name="name">school.sub.level.tree</field>
+        <field name="model">school.sub.level</field>
+        <field name="arch" type="xml">
+            <tree string="School Sub Level">
+                <field name="name"/>
+                <field name="level_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="school_sub_level_action" model="ir.actions.act_window">
+        <field name="name">School Sub Level</field>
+        <field name="res_model">school.sub.level</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create a new school Sub Level</p>
+        </field>
+    </record>
+
+    <!-- Menu Item -->
+    <menuitem id="menu_school_sub_level" name="Sous-niveaux Scolaires" parent="menu_school_configuration" action="school_sub_level_action"/>
+</odoo>

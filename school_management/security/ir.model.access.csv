@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+school_management.access_student_profile,access_student_profile,school_management.model_student_profile,,1,1,1,1
+school_management.access_school_year,access_school_year,school_management.model_school_year,,1,1,1,1
+school_management.access_school_classes,access_school_classes,school_management.model_school_classes,,1,1,1,1
+school_management.access_school_sub_level,access_school_sub_level,school_management.model_school_sub_level,,1,1,1,1
+school_management.access_school_level,access_school_level,school_management.model_school_level,,1,1,1,1
+school_management.access_student_subscription,access_student_subscription,school_management.model_student_subscription,,1,1,1,1
