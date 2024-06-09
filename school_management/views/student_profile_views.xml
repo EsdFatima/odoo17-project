@@ -47,7 +47,7 @@
                                     <group>
                                         <field name="identification_no"/>
                                         <field name="reg_number"/>
-                                        <field name="commune_id"/>
+                                        <field name="commune_id" options="{'no_create': True}"/>
                                     </group>
                                     <group>
                                         <field name="reg_number_bac"/>
