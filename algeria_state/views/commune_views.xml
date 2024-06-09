@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Form View -->
+    <record id="view_commune_form" model="ir.ui.view">
+        <field name="name">commune.form</field>
+        <field name="model">commune</field>
+        <field name="arch" type="xml">
+            <form string="Alegria Commune">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="code_postal"/>
+                        <field name="state_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree View -->
+    <record id="view_commune__tree" model="ir.ui.view">
+        <field name="name">commune.tree</field>
+        <field name="model">commune</field>
+        <field name="arch" type="xml">
+            <tree string="Alegria Commune">
+                <field name="name"/>
+                <field name="code_postal"/>
+                <field name="state_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="commune_action" model="ir.actions.act_window">
+        <field name="name">Algeria Commune</field>
+        <field name="res_model">commune</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create a new Commune</p>
+        </field>
+    </record>
+
+    <!-- Menu Item -->
+    <menuitem id="menu_commune" name="Communes" parent="menu_algeria_dz" action="commune_action"/>
+</odoo>

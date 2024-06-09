@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="01" model="state">
+            <field name="nom">Adrar</field>
+        </record>
+        <record id="02" model="state">
+            <field name="nom">Chlef</field>
+        </record>
+        <record id="03" model="state">
+            <field name="nom">Laghouat</field>
+        </record>
+        <record id="04" model="state">
+            <field name="nom">Oum El Bouaghi</field>
+        </record>
+        <record id="05" model="state">
+            <field name="nom">Batna</field>
+        </record>
+        <record id="06" model="state">
+            <field name="nom">Béjaïa</field>
+        </record>
+        <record id="07" model="state">
+            <field name="nom">Biskra</field>
+        </record>
+        <record id="08" model="state">
+            <field name="nom">Béchar</field>
+        </record>
+        <record id="09" model="state">
+            <field name="nom">Blida</field>
+        </record>
+        <record id="10" model="state">
+            <field name="nom">Bouira</field>
+        </record>
+        <record id="11" model="state">
+            <field name="nom">Tamanrasset</field>
+        </record>
+        <record id="12" model="state">
+            <field name="nom">Tébessa</field>
+        </record>
+        <record id="13" model="state">
+            <field name="nom">Tlemcen</field>
+        </record>
+        <record id="14" model="state">
+            <field name="nom">Tiaret</field>
+        </record>
+        <record id="15" model="state">
+            <field name="nom">Tizi Ouzou</field>
+        </record>
+        <record id="16" model="state">
+            <field name="nom">Alger</field>
+        </record>
+        <record id="17" model="state">
+            <field name="nom">Djelfa</field>
+        </record>
+        <record id="18" model="state">
+            <field name="nom">Jijel</field>
+        </record>
+        <record id="19" model="state">
+            <field name="nom">Sétif</field>
+        </record>
+        <record id="20" model="state">
+            <field name="nom">Saïda</field>
+        </record>
+        <record id="21" model="state">
+            <field name="nom">Skikda</field>
+        </record>
+        <record id="22" model="state">
+            <field name="nom">Sidi Bel Abbès</field>
+        </record>
+        <record id="23" model="state">
+            <field name="nom">Annaba</field>
+        </record>
+        <record id="24" model="state">
+            <field name="nom">Guelma</field>
+        </record>
+        <record id="25" model="state">
+            <field name="nom">Constantine</field>
+        </record>
+        <record id="26" model="state">
+            <field name="nom">Médéa</field>
+        </record>
+        <record id="27" model="state">
+            <field name="nom">Mostaganem</field>
+        </record>
+        <record id="28" model="state">
+            <field name="nom">M'Sila</field>
+        </record>
+        <record id="29" model="state">
+            <field name="nom">Mascara</field>
+        </record>
+        <record id="30" model="state">
+            <field name="nom">Ouargla</field>
+        </record>
+        <record id="31" model="state">
+            <field name="nom">Oran</field>
+        </record>
+        <record id="32" model="state">
+            <field name="nom">El Bayadh</field>
+        </record>
+        <record id="33" model="state">
+            <field name="nom">Illizi</field>
+        </record>
+        <record id="34" model="state">
+            <field name="nom">Bordj Bou Arreridj</field>
+        </record>
+        <record id="35" model="state">
+            <field name="nom">Boumerdès</field>
+        </record>
+        <record id="36" model="state">
+            <field name="nom">El Tarf</field>
+        </record>
+        <record id="37" model="state">
+            <field name="nom">Tindouf</field>
+        </record>
+        <record id="38" model="state">
+            <field name="nom">Tissemsilt</field>
+        </record>
+        <record id="39" model="state">
+            <field name="nom">El Oued</field>
+        </record>
+        <record id="40" model="state">
+            <field name="nom">Khenchela</field>
+        </record>
+        <record id="41" model="state">
+            <field name="nom">Souk Ahras</field>
+        </record>
+        <record id="42" model="state">
+            <field name="nom">Tipaza</field>
+        </record>
+        <record id="43" model="state">
+            <field name="nom">Mila</field>
+        </record>
+        <record id="44" model="state">
+            <field name="nom">Aïn Defla</field>
+        </record>
+        <record id="45" model="state">
+            <field name="nom">Naâma</field>
+        </record>
+        <record id="46" model="state">
+            <field name="nom">Aïn Témouchent</field>
+        </record>
+        <record id="47" model="state">
+            <field name="nom">Ghardaïa</field>
+        </record>
+        <record id="48" model="state">
+            <field name="nom">Relizane</field>
+        </record>
+    </data>
+</odoo>
