@@ -37,31 +37,40 @@
                                        name="name" default_focus="1" placeholder="e.g. Brandom Freeman"/>
                             </h1>
                             <div class="o_row">
-                                <field name="name_ar"  placeholder="Name in Arabic..."/>
+                                <field name="name_ar" placeholder="Name in Arabic..."/>
 
                             </div>
                         </div>
                         <notebook>
                             <page name="Informations Générales" string="General Information">
-                                <group name="container_row_2">
+                                <group>
                                     <group>
                                         <field name="identification_no"/>
                                         <field name="reg_number"/>
-                                        <field name="commune_id" options="{'no_create': True}"/>
+                                        <label for="address" string="Addresse"/>
+                                        <div class="o_address_format">
+                                            <field name="address" placeholder="Ville" class="o_address_city"/>
+                                            <field name="state_id" placeholder="Wilaya" options="{'no_open': True, 'no_quick_create': True}"
+                                                   class="o_address_state"/>
+                                            <field name="commune_id" placeholder="Commune"
+                                                   domain="[('state_id', '=', state_id)]" options="{'no_create': True}"
+                                                   class="o_address_zip"/>
+                                        </div>
                                     </group>
                                     <group>
                                         <field name="reg_number_bac"/>
-                                        <field name="address"/>
                                         <field name="phone"/>
+
                                     </group>
                                 </group>
+
                             </page>
                             <page name="Information Privée" string="Private Information">
                                 <group name="container_row_2">
                                     <group>
                                         <field name="birthday"/>
                                         <field name="gender"/>
-                                         <field name="mother_name"/>
+                                        <field name="mother_name"/>
                                         <field name="father_name"/>
 
                                     </group>
@@ -72,17 +81,17 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Personnes Autorisées" >
-                            <group >
-                                <field name="partner_ids" nolabel="1" colspan="2" widget="auto_save_res_partner">
-                                    <tree>
-                                        <field name="name"/>
-                                        <field name="phone"/>
-                                        <field name="email"/>
+                            <page string="Personnes Autorisées">
+                                <group>
+                                    <field name="partner_ids" nolabel="1" colspan="2" widget="auto_save_res_partner">
+                                        <tree>
+                                            <field name="name"/>
+                                            <field name="phone"/>
+                                            <field name="email"/>
 
-                                    </tree>
-                                </field>
-                            </group>
+                                        </tree>
+                                    </field>
+                                </group>
 
                             </page>
                         </notebook>
@@ -127,13 +136,16 @@
                                     </div>
 
                                     <div class="o_kanban_record_headings">
-                                        <i class="fa fa-phone"></i>  <field name="phone"/>
+                                        <i class="fa fa-phone"></i>
+                                        <field name="phone"/>
                                     </div>
                                     <div class="o_kanban_record_headings">
-                                        <i class="fa fa-id-badge"></i> <field name="reg_number"/>
+                                        <i class="fa fa-id-badge"></i>
+                                        <field name="reg_number"/>
                                     </div>
                                     <div class="o_kanban_record_headings">
-                                        <i class="fa fa-address-card"></i> <field name="address"/>
+                                        <i class="fa fa-address-card"></i>
+                                        <field name="address"/>
                                     </div>
 
                                 </div>
@@ -145,18 +157,18 @@
             </field>
         </record>
         <record id="view_student_profile_search" model="ir.ui.view">
-        <field name="name">student.profile.search</field>
-        <field name="model">student.profile</field>
-        <field name="arch" type="xml">
-            <search>
-                <field name="name"/>
-                <field name="phone"/>
-                <field name="commune_id"/>
-                <field name="address"/>
-                <field name="reg_number"/>
-            </search>
-        </field>
-    </record>
+            <field name="name">student.profile.search</field>
+            <field name="model">student.profile</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="phone"/>
+                    <field name="commune_id"/>
+                    <field name="address"/>
+                    <field name="reg_number"/>
+                </search>
+            </field>
+        </record>
 
         <!-- Action for the Custom Model -->
         <record id="action_student_model" model="ir.actions.act_window">

@@ -24,6 +24,7 @@ class StudentProfile(models.Model):
     phone = fields.Char(string='Numéro de téléphone')
     identification_no = fields.Char(string='Numéro d\'identification')
     commune_id = fields.Many2one('commune', string='Commune')
+    state_id = fields.Many2one('state', string='Wilaya')
     partner_ids = fields.Many2many('res.partner', string='Personnes Autorisées')
     partner_id = fields.Many2one('res.partner', string='Contact')
 

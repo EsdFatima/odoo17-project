@@ -9,7 +9,7 @@
                     <group>
                         <group>
                             <field name="student_id" options="{'no_create': True}"/>
-                            <field name="level_id" options="{'no_create': True}" onchange="on_level_change(level_id)"/>
+                            <field name="level_id" options="{'no_create': True}"/>
                             <field name="class_id" domain="[('sub_level_id', '=', sub_level_id)]" invisible="sub_level_id == False" options="{'no_create': True}"/>
                         </group>
                         <group>
