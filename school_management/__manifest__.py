@@ -10,6 +10,7 @@
     """,
     'depends': ['base', 'mail', 'algeria_state'],
     'data': [
+        'security/security.xml',
         'security/ir.model.access.csv',
         'views/student_profile_views.xml',
         'views/school_year_views.xml',

@@ -181,7 +181,7 @@
         </record>
 
         <!-- Menuitem for the Custom Model -->
-        <menuitem id="menu_school_management" name="Gestion Scolaire" sequence="10"/>
+        <menuitem id="menu_school_management" name="Gestion Scolaire" sequence="10" groups="school_manager"/>
         <menuitem id="menu_students_management" name="Gestion des étudiants" parent="menu_school_management"
                   action="action_student_model"
                   sequence="5"/>

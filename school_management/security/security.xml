@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="school_manager" model="res.groups">
+            <field name="name">Gestionnaire d'École</field>
+        </record>
+        <record model="ir.ui.menu" id="menu_school_management">
+            <field name="groups_id" eval="[(5,ref('school_manager'))]"/>
+        </record>
+    </data>
+
+</odoo>
