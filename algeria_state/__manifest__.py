@@ -7,7 +7,7 @@
     'summary': 'State and commune of algeria',
     'description': """
     """,
-    'depends': [],
+    'depends': ['base',],
     'data': [
         'security/ir.model.access.csv',
         'data/state.xml',
